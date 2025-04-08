@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistemas de Estrangeiros</h1>
+    Digite seu pais:<input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtp = window.document.getElementById('txtpais')
+            var res = window.document.getElementById('res')
+            var resp = (txtp.value)  
+            res.innerHTML = `Vivendo em ${resp}`
+            if(resp == 'Brasil'){
+                res.innerHTML += '<p>Você é barsileiro!</p>'
+            } else{
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
